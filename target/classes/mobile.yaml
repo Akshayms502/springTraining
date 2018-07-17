@@ -1,0 +1,5 @@
+val:
+	type:vga
+	glassType:tuffen
+	len:5
+	bre:3

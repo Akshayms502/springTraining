@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   default-init-method="ginit" default-destroy-method="gdestroy"
+	   >
+     	
+	<bean id="camera" class="com.spring.autowire.Camera">
+	<property name="type" value="vga"/>
+	</bean>
+	<bean id="screen" class="com.spring.autowire.Screen">
+	<property name="glassType" value="tuffen"/>
+	<property name="len" value="5"/>
+	<property name="bre" value="3"/>
+	</bean>
+	
+	<bean id="speaker" class="com.spring.autowire.Speaker">
+	<property name="type" value="mono"/>
+	<property name="volLevel" value="10"/>
+	</bean>
+	
+	<bean id="mobile" class="com.spring.autowire.Mobile" autowire="byName">
+
+	</bean>
+
+
+</beans>

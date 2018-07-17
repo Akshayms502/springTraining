@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   default-init-method="ginit" default-destroy-method="gdestroy"
+	   >
+     	
+	<bean id="employee" class="com.spring.Employee" scope="singleton">
+	<property name="empid" value="${employee.empid}"></property>
+	<property name="empname" value="${employee.empname}"></property>
+	<property name="empsal" value="${employee.empsal}"></property>
+	
+	</bean>
+	<bean class="com.spring.bpp.EmployeeBeanProcessor"></bean>
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.class">
+	<property name="Location">
+	<value>employee.properties</value>
+	</property> 
+	</bean>
+
+
+</beans>
